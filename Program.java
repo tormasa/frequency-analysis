@@ -109,7 +109,13 @@ public class Program {
 			System.out.print("  ");
 
 			for (Kirjain k : koodiKirjaimet) {
-				System.out.print(k.kirjain + " ");
+				for (KirjainPari p : kirjainPariLista) {
+					if (p.koodattu == k.kirjain) {
+						System.out.print(p.orginal + " ");
+
+						break;
+					}
+				}
 			}
 
 			System.out.println("\n\nMuuta kirjainta (pelkkä ENTER lopettaa, oe = ö, ae = ä): ");
